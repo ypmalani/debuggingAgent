@@ -1,0 +1,12 @@
+1) Milestone 5: Context & Memory 
+A basic agent will make the same mistake twice. You need to give it memory of what it already tried.
+
+Goal: Pass the history of failed attempts back into the prompt so the LLM doesn't loop infinitely on a bad fix.
+
+Vibecoding Prompts:
+
+"Modify the main agent loop to maintain an attempt_history list. Every time a test fails, append the failed code and the resulting error to this list."
+
+"Update the LLM prompt to include this history. Add a section saying: 'Here are your previous failed attempts and the errors they produced. DO NOT try these same fixes again.' Format the history cleanly so the LLM understands it."
+
+2) MORE UPGRADES
